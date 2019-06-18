@@ -7,11 +7,11 @@ package SynchronizedTest;
  */
 public class Run {
     public static void main(String[] args) {
-        SynchronizedTest.Service service = new SynchronizedTest.Service();
-        SynchronizedTest.ThreadA a = new SynchronizedTest.ThreadA(service);
+       Service service = new Service();
+        ThreadA a = new ThreadA(service);
         a.setName("A");
         a.start();
-        SynchronizedTest.ThreadB b = new SynchronizedTest.ThreadB(service);
+        ThreadB b = new ThreadB(service);
         b.setName("B");
         b.start();
     }
