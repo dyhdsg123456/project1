@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Author: dyh
  * Date:   2019/6/19
- * Description:
+ * Description:wait notify实现
  */
 public class Test {
     //最大数量
@@ -62,7 +62,7 @@ public class Test {
                        e.printStackTrace();
                    }
                    synchronized (lock){
-                   while (list.size()==10){
+                   while (list.size()==maxsize){
                        try {
                            lock.wait();
                        } catch (InterruptedException e) {
